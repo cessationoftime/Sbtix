@@ -7,3 +7,7 @@ lazy val two = project
 lazy val three = project.dependsOn(one).enablePlugins(JavaAppPackaging)
 
 lazy val root = project.in(file(".")).aggregate(one, two, three)
+
+//resolvers += Resolver.typesafeIvyRepo("releases")
+
+//resolvers += Resolver.sbtPluginRepo("releases")

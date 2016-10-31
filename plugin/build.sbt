@@ -4,6 +4,7 @@ name := "sbtix"
 organization := "se.nullable.sbtix"
 version := "0.2-SNAPSHOT"
 
+addSbtPlugin("net.virtual-void" % "sbt-dependency-graph" % "0.8.2")
 addSbtPlugin("io.get-coursier" % "sbt-coursier" % "1.0.0-M14")
 
 resolvers += Resolver.typesafeIvyRepo("releases")

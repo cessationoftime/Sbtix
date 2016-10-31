@@ -101,6 +101,14 @@
       url = "https://repo1.maven.org/maven2/org/scala-sbt/test-interface/1.0/test-interface-1.0.pom";
       sha256 = "0bknid634xcq5r8fs1bx0ydxs3rhzgmzq1400h7y29n2s2lhdfk1";
     };
+    "nix-public/com/github/mdr/ascii-graphs_2.10/0.0.3/ascii-graphs_2.10-0.0.3.pom" = {
+      url = "https://repo1.maven.org/maven2/com/github/mdr/ascii-graphs_2.10/0.0.3/ascii-graphs_2.10-0.0.3.pom";
+      sha256 = "059apc1v3yvpn14zddba4r844akhj3dws2khfg148dxsdzyzzj5r";
+    };
+    "nix-public/com/github/mdr/ascii-graphs_2.10/0.0.3/ascii-graphs_2.10-0.0.3.jar" = {
+      url = "https://repo1.maven.org/maven2/com/github/mdr/ascii-graphs_2.10/0.0.3/ascii-graphs_2.10-0.0.3.jar";
+      sha256 = "10dzrayar3vbcggjvk8cfw7iz97r8fjf6mvbld8qix3k3nbaa7sn";
+    };
     "nix-public/org/scalaz/scalaz-effect_2.10/7.2.5/scalaz-effect_2.10-7.2.5.jar" = {
       url = "https://repo1.maven.org/maven2/org/scalaz/scalaz-effect_2.10/7.2.5/scalaz-effect_2.10-7.2.5.jar";
       sha256 = "1inqmn5mjy2nsq75846fsz7590cfvs1ya6vd7mz9pywr5fas0c5d";
@@ -172,6 +180,14 @@
     "nix-public/org/json4s/json4s-core_2.10/3.2.10/json4s-core_2.10-3.2.10.pom" = {
       url = "https://repo1.maven.org/maven2/org/json4s/json4s-core_2.10/3.2.10/json4s-core_2.10-3.2.10.pom";
       sha256 = "1fhzpzpx9xk9lx8m3za793qf8kwipc4cs338865z6k3wg8xdhvv9";
+    };
+    "nix-public/net/virtual-void/sbt-dependency-graph_2.10_0.13/0.8.2/sbt-dependency-graph-0.8.2.pom" = {
+      url = "https://repo1.maven.org/maven2/net/virtual-void/sbt-dependency-graph_2.10_0.13/0.8.2/sbt-dependency-graph-0.8.2.pom";
+      sha256 = "0kb8m0ac3xr5cy469rmcrv9jrb410h9m5navnmcx5sxqhiya34iv";
+    };
+    "nix-public/net/virtual-void/sbt-dependency-graph_2.10_0.13/0.8.2/sbt-dependency-graph-0.8.2.jar" = {
+      url = "https://repo1.maven.org/maven2/net/virtual-void/sbt-dependency-graph_2.10_0.13/0.8.2/sbt-dependency-graph-0.8.2.jar";
+      sha256 = "0giylh7cwh5b80xgqimkdx8mw6c0s7yysdg3jzhb63s7s7lg85ad";
     };
     "nix-public/io/get-coursier/sbt-coursier_2.10_0.13/1.0.0-M14/sbt-coursier-1.0.0-M14.jar" = {
       url = "https://repo1.maven.org/maven2/io/get-coursier/sbt-coursier_2.10_0.13/1.0.0-M14/sbt-coursier-1.0.0-M14.jar";

@@ -3,6 +3,7 @@
   "repos" = {
     "nix-public" = "";
     "nix-typesafe-ivy-releases" = "[organisation]/[module]/(scala_[scalaVersion]/)(sbt_[sbtVersion]/)[revision]/[type]s/[artifact](-[classifier]).[ext]";
+    "nix-sbt-plugin-releases" = "[organisation]/[module]/(scala_[scalaVersion]/)(sbt_[sbtVersion]/)[revision]/[type]s/[artifact](-[classifier]).[ext]";
   };
   "artifacts" = {
     "nix-public/jline/jline/2.13/jline-2.13.pom" = {
@@ -28,6 +29,14 @@
     "nix-public/com/thoughtworks/paranamer/paranamer/2.6/paranamer-2.6.pom" = {
       url = "https://repo1.maven.org/maven2/com/thoughtworks/paranamer/paranamer/2.6/paranamer-2.6.pom";
       sha256 = "0jcnwq4yh2nzbsx1x1kvnxrs0xrznjclyfxg31nfrxdq1cqd66q5";
+    };
+    "nix-public/org/apache/ant/ant/1.9.6/ant-1.9.6.pom" = {
+      url = "https://repo1.maven.org/maven2/org/apache/ant/ant/1.9.6/ant-1.9.6.pom";
+      sha256 = "0xxgm4qvfms97i6a7phkxaxzwyb93lmrbhrccbgzjapp8mhr8n4q";
+    };
+    "nix-public/org/apache/ant/ant/1.9.6/ant-1.9.6.jar" = {
+      url = "https://repo1.maven.org/maven2/org/apache/ant/ant/1.9.6/ant-1.9.6.jar";
+      sha256 = "1gz96gb28mq1r911j30ybbnm85n5r51pzh23hjx7c533anyf0kfp";
     };
     "nix-public/org/scala-sbt/ivy/ivy/2.3.0-sbt-2cc8d2761242b072cedb0a04cb39435c4fa24f9a/ivy-2.3.0-sbt-2cc8d2761242b072cedb0a04cb39435c4fa24f9a.pom" = {
       url = "https://repo1.maven.org/maven2/org/scala-sbt/ivy/ivy/2.3.0-sbt-2cc8d2761242b072cedb0a04cb39435c4fa24f9a/ivy-2.3.0-sbt-2cc8d2761242b072cedb0a04cb39435c4fa24f9a.pom";
@@ -141,6 +150,14 @@
       url = "https://repo1.maven.org/maven2/org/fusesource/jansi/jansi/1.11/jansi-1.11.pom";
       sha256 = "1jd56xdki0fk6s6qwvdmqa0ajwmsdvfr4iyyycrq0sahfkf5m5xh";
     };
+    "nix-public/org/apache/commons/commons-compress/1.4.1/commons-compress-1.4.1.jar" = {
+      url = "https://repo1.maven.org/maven2/org/apache/commons/commons-compress/1.4.1/commons-compress-1.4.1.jar";
+      sha256 = "11jzrwznbflgampz08wkivg99zz8nna6x9wx9dj3s1vgf600v818";
+    };
+    "nix-public/org/apache/commons/commons-compress/1.4.1/commons-compress-1.4.1.pom" = {
+      url = "https://repo1.maven.org/maven2/org/apache/commons/commons-compress/1.4.1/commons-compress-1.4.1.pom";
+      sha256 = "008xv6864m20n28g9ax00kvbnl98dq1024b4w5n58kjd9sjh9j39";
+    };
     "nix-public/org/jsoup/jsoup/1.9.2/jsoup-1.9.2.jar" = {
       url = "https://repo1.maven.org/maven2/org/jsoup/jsoup/1.9.2/jsoup-1.9.2.jar";
       sha256 = "0sm4s1a8plb8z5467799jvp0s37dr98q82z3y436w9c2n7qqa64w";
@@ -148,6 +165,14 @@
     "nix-public/org/jsoup/jsoup/1.9.2/jsoup-1.9.2.pom" = {
       url = "https://repo1.maven.org/maven2/org/jsoup/jsoup/1.9.2/jsoup-1.9.2.pom";
       sha256 = "0zh9xn8qcgjyhki5kbhb3rhbhd12avwqy6n9fqfzymdq3c41k8lk";
+    };
+    "nix-public/org/tukaani/xz/1.0/xz-1.0.jar" = {
+      url = "https://repo1.maven.org/maven2/org/tukaani/xz/1.0/xz-1.0.jar";
+      sha256 = "01bldjhizk7mcypadrssqd2yihv8pzil5ylq4dn2h46sh24drbvy";
+    };
+    "nix-public/org/tukaani/xz/1.0/xz-1.0.pom" = {
+      url = "https://repo1.maven.org/maven2/org/tukaani/xz/1.0/xz-1.0.pom";
+      sha256 = "0mlrjisnlhl2m7fkdq4vfshlk7h23wkna0b2xm26mj1791gcph7i";
     };
     "nix-public/com/lihaoyi/sourcecode_2.10/0.1.1/sourcecode_2.10-0.1.1.jar" = {
       url = "https://repo1.maven.org/maven2/com/lihaoyi/sourcecode_2.10/0.1.1/sourcecode_2.10-0.1.1.jar";
@@ -180,6 +205,14 @@
     "nix-public/io/get-coursier/sbt-coursier_2.10_0.13/1.0.0-M14/sbt-coursier-1.0.0-M14.pom" = {
       url = "https://repo1.maven.org/maven2/io/get-coursier/sbt-coursier_2.10_0.13/1.0.0-M14/sbt-coursier-1.0.0-M14.pom";
       sha256 = "0b3gm5h9n3qg6hpcrx4zs1i56c0q0mdcn2fm5ng9lvrmqjql6a1j";
+    };
+    "nix-public/org/apache/ant/ant-launcher/1.9.6/ant-launcher-1.9.6.jar" = {
+      url = "https://repo1.maven.org/maven2/org/apache/ant/ant-launcher/1.9.6/ant-launcher-1.9.6.jar";
+      sha256 = "0yi7dh0d3q9b93imww1fag2gcz5pxp4g2kkk6xjqvxxczmh6mipj";
+    };
+    "nix-public/org/apache/ant/ant-launcher/1.9.6/ant-launcher-1.9.6.pom" = {
+      url = "https://repo1.maven.org/maven2/org/apache/ant/ant-launcher/1.9.6/ant-launcher-1.9.6.pom";
+      sha256 = "1z8vl8d737db7xb1qgwb1infhnbfzxa4sggkcrr48638hqs4j3lc";
     };
     "nix-public/com/jcraft/jsch/0.1.46/jsch-0.1.46.pom" = {
       url = "https://repo1.maven.org/maven2/com/jcraft/jsch/0.1.46/jsch-0.1.46.pom";
@@ -397,14 +430,6 @@
       url = "https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/compile/0.13.12/ivys/ivy.xml";
       sha256 = "0y9964094sfyhmjc0452f8drpcymqxbky0bvrq067dihyg7mq2rx";
     };
-    "nix-typesafe-ivy-releases/org.scala-sbt/scripted-plugin/0.13.12/jars/scripted-plugin.jar" = {
-      url = "https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/scripted-plugin/0.13.12/jars/scripted-plugin.jar";
-      sha256 = "1273fnllbci0d3aaadf9vbjl3l0anjhb41xl54vvgjwmyk5ahqqw";
-    };
-    "nix-typesafe-ivy-releases/org.scala-sbt/scripted-plugin/0.13.12/ivys/ivy.xml" = {
-      url = "https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/scripted-plugin/0.13.12/ivys/ivy.xml";
-      sha256 = "0if5f21zcmanbg2mxvgldbys4l4lv3rx4kgpyy1np1nb0zv3irs1";
-    };
     "nix-typesafe-ivy-releases/org.scala-sbt/logging/0.13.12/jars/logging.jar" = {
       url = "https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/logging/0.13.12/jars/logging.jar";
       sha256 = "0lgfa0r0647ib1v98y4608vz35ww8afq0dddj7sk2fwi1pqlpic5";
@@ -500,6 +525,14 @@
     "nix-typesafe-ivy-releases/org.scala-sbt/main/0.13.12/ivys/ivy.xml" = {
       url = "https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/main/0.13.12/ivys/ivy.xml";
       sha256 = "0zm56w1y70031pcxqy3sy35y4yjsksiwm0ajzl3p63wmn2pmwf8m";
+    };
+    "nix-sbt-plugin-releases/com.typesafe.sbt/sbt-native-packager/scala_2.10/sbt_0.13/1.1.4/jars/sbt-native-packager.jar" = {
+      url = "https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.typesafe.sbt/sbt-native-packager/scala_2.10/sbt_0.13/1.1.4/jars/sbt-native-packager.jar";
+      sha256 = "0k8hgq5g6fn5cbvywxvyw70blsf6x0z3v60anw6xfrfgmgr91pr6";
+    };
+    "nix-sbt-plugin-releases/com.typesafe.sbt/sbt-native-packager/scala_2.10/sbt_0.13/1.1.4/ivys/ivy.xml" = {
+      url = "https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.typesafe.sbt/sbt-native-packager/scala_2.10/sbt_0.13/1.1.4/ivys/ivy.xml";
+      sha256 = "0vfyccypplbng6issqc3g83j2zb9lp58i7j80xpklfjg6h74ng9n";
     };
   };
 }

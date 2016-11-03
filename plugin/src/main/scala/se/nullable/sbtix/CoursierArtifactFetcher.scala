@@ -20,9 +20,9 @@ class CoursierArtifactFetcher(scalaVersion: String,
                               scalaBinaryVersion: String,
                               logger: Logger
                              ) {
-  def buildNixProject(projectRef:ProjectRef,modules: Set[Dependency], resolvers: Seq[Resolver], credentials: Map[String, Credentials]): (Seq[se.nullable.sbtix.GenericModule], Seq[sbt.Resolver])
+  def buildNixProject(resolvers: Seq[Resolver], credentials: Map[String, Credentials])(dependency: Dependency): (Seq[se.nullable.sbtix.GenericModule], Seq[sbt.Resolver])
 = {
-    val initResolution = Resolution(modules)
+    val initResolution = Resolution(Set(dependency))
  
     val repos = resolvers.flatMap{resolver => 
       FromSbt.repository(resolver, ivyProps, logger, credentials.get(resolver.name).map(_.authentication))}

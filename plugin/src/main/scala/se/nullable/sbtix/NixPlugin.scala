@@ -15,7 +15,9 @@ object NixPlugin extends AutoPlugin {
   object ModuleBasicId {
 
     def fromModuleID(m:ModuleID) = {
-       ModuleBasicId(m.organization,m.name,m.revision)
+       var m1 = m.cross(CrossVersion.Disabled)
+       var mbi = ModuleBasicId(m1.organization,m1.name.replace("_2.10","").replace("_2.11","").replace("_2.12",""),m1.revision)
+       mbi
     }
 
     def filterBasicId(exclude:Set[ModuleBasicId])(m:ModuleID) : Option[ModuleID] = {
@@ -81,29 +83,32 @@ case class ModuleBasicId(organization: String, name: String, revision: String)
         log
       )
  
- val allCrossProjectIds =  projectID.all(filter).value.toSet.map(CrossVersion(scalaVersion.value, scalaBinaryVersion.value))
+ val allCrossProjectIds =  projectID.all(filter).value.toSet  //.map(CrossVersion(scalaVersion.value, scalaBinaryVersion.value))
  println("allprojectIDS: " + allCrossProjectIds)
  val excludeBasicIds = allCrossProjectIds.map(ModuleBasicId.fromModuleID)
-      val modules : Set[sbt.ModuleID]  = sbtReportTask.all(filter).value.flatten.flatMap(_.modules).toSet.flatMap(ModuleBasicId.filterBasicId(excludeBasicIds))
+      val modules : Set[sbt.ModuleID]  = sbtReportTask.all(filter).value.flatten.flatMap(_.modules).toSet
 
      //val deps : Set[coursier.Dependency] = modules.map(graphToCoursierDep).toSet;
      // val dep = coursier.Dependency(coursier.Module("com.github.alexarchambault", "argonaut-shapeless_6.1_2.11"), "0.2.0")
 
-    val rawDeps = allDependencies.value.toSet -- projectDependencies.value;
+    val rawDeps = ((modules ++ allDependencies.value.toSet) -- projectDependencies.value).flatMap(ModuleBasicId.filterBasicId(excludeBasicIds));
 
-    val originalDeps = rawDeps.flatMap(FromSbt.dependencies(_, sVersion, sbVersion, "jar")).map(_._2);
+    //val originalDeps = rawDeps.flatMap(FromSbt.dependencies(_, sVersion, sbVersion, "jar")).map(_._2);
 
-val reportDeps = (rawDeps ++ modules).flatMap(FromSbt.dependencies(_, sVersion, sbVersion, "jar")).map(_._2);
+val reportDeps = rawDeps.flatMap(FromSbt.dependencies(_, sVersion, sbVersion, "jar")).map(_._2);
 
      // log.info("\n\n!!!graphDeps: " + modules.toString)
 
      // log.info("\n\n!!!coursierDeps: " + originalDeps.toString)
     
-      //val isDotty = ScalaInstance.isDotty(sVersion)
+     // val isDotty = ScalaInstance.isDotty(sVersion)
       // WE ARE GETTING THE CORRECT INFORMATION. COURSIER IGNORES DUPLICATE MODULES AND TAKES THE MORE RECENT VERSION!! Send it one module at a time.
-   //   val (a,b) = reportDeps.toSeq.map(fetcher.buildNixProject(externalResolvers.all(filter).value.flatten, CoursierPlugin.autoImport.coursierCredentials.value)).unzip
-     // (a.flatten,b.flatten)
-     (Seq.empty,Seq.empty)
+      println("\n")
+      val (a,b) = reportDeps.toSeq.map{x =>
+        print(".")
+        fetcher.buildNixProject(externalResolvers.all(filter).value.flatten, CoursierPlugin.autoImport.coursierCredentials.value)(x)}.unzip
+      (a.flatten,b.flatten)
+   //  (Seq.empty,Seq.empty)
     }
   lazy val genNixCommand =
     Command.command("genNix") { initState =>

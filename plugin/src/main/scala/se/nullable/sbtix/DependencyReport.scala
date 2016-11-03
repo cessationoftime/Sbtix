@@ -22,7 +22,7 @@ object DependencyReport {
     report.details.flatMap(_.modules).map{modReport=>
 
 //if (modReport.evicted) {
-println("ModReport!: " + modReport)
+//println("ModReport!: " + modReport)
 //}
 
      ModuleInfo(
